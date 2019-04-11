@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 // The Thumbnail component renders a div that uses some CSS to render a background image
 // It will always keep square proportions at any size without the image warping
@@ -6,6 +7,7 @@ import React from "react";
 function Thumbnail({ src }) {
   return (
     <div
+    className="thumbnail"
       role="img"
       aria-label="Recipe Image"
       style={{

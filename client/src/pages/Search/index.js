@@ -57,10 +57,10 @@ class Search extends Component {
               key={book.id} 
               authors={book.volumeInfo.authors ? book.volumeInfo.authors : ["No Author Available"]}
               title={book.volumeInfo.title}
-              synopsis={book.volumeInfo.description ? 
-                book.volumeInfo.description : "No Description Available"}
+              // synopsis={book.volumeInfo.description ? 
+              //   book.volumeInfo.description : "No Description Available"}
               link={book.selfLink}
-              thumbnail={book.volumeInfo.imageLinks ? 
+              thumbnail={book.volumeInfo.imageLinks.thumbnail ? 
                 book.volumeInfo.imageLinks.thumbnail : "#"}
               />
             )

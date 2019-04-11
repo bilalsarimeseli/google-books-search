@@ -13,7 +13,7 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "author": "Kevin Bray",
+  "author": "Lily Simmons",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
@@ -35,10 +35,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TennisSprinterkb/MERN-books.git"
+    "url": "git+https://github.com/lilysimmons/google-books-search"
   },
   "bugs": {
-    "url": "https://github.com/TennisSprinterkb/MERN-books/issues"
+    "url": "https://github.com/lilysimmons/google-books-search/issues"
   },
-  "homepage": "https://github.com/TennisSprinterkb/MERN-books#readme"
+  "homepage": "https://github.com/lilysimmons/google-books-search#readme"
 }
