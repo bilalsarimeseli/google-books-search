@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
+import AddBookBtn from "../../components/AddBookBtn";
 import { Row, Col } from "../../components/Grid";
 import { BookList, BookListItem } from "../../components/BookList";
 import EmptyList from "../../components/EmptyList";
+
 
 class Search extends Component {
   state = {
@@ -22,7 +24,7 @@ class Search extends Component {
     axios
       .get(url)
       .then(res => {
-        console.log(res);
+        //console.log(res);
         this.displayRes(res.data);
       })
       .catch(err => console.log(err));
@@ -34,9 +36,11 @@ class Search extends Component {
     this.setState({
       [name]: value
     });
-    console.log("Query", this.state.query);
+    //console.log("Query", this.state.query);
   };
 
+
+  
 
   render() {
     return (
@@ -53,16 +57,29 @@ class Search extends Component {
           <BookList>
           {this.state.books.map(book => {
             return (
+              <div>
               <BookListItem
               key={book.id} 
               authors={book.volumeInfo.authors ? book.volumeInfo.authors : ["No Author Available"]}
               title={book.volumeInfo.title}
-              // synopsis={book.volumeInfo.description ? 
-              //   book.volumeInfo.description : "No Description Available"}
+              synopsis={book.volumeInfo.description ? 
+                book.volumeInfo.description : "No Description Available"}
               link={book.selfLink}
               thumbnail={book.volumeInfo.imageLinks.thumbnail ? 
                 book.volumeInfo.imageLinks.thumbnail : "#"}
               />
+
+              <AddBookBtn
+              authors={book.volumeInfo.authors ? book.volumeInfo.authors : ["No Author Available"]}
+              title={book.volumeInfo.title}
+              synopsis={book.volumeInfo.description ? 
+                book.volumeInfo.description : "No Description Available"}
+              link={book.selfLink}
+              thumbnail={book.volumeInfo.imageLinks.thumbnail ? 
+                book.volumeInfo.imageLinks.thumbnail : "#"}
+              
+              />
+              </div>
             )
           })}
           </BookList>

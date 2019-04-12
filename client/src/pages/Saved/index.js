@@ -4,7 +4,7 @@ import { BookList, BookListItem } from "../../components/BookList";
 import axios from "axios";
 import EmptyList from '../../components/EmptyList';
 import RemoveBookBtn from '../../components/RemoveBookBtn';
-import "./style.css"
+import { toast } from 'react-toastify';
 
 
 class Saved extends Component {
@@ -29,9 +29,11 @@ class Saved extends Component {
     console.log(id);
 
     axios.delete(`/api/books/${id}`)
-      .then(
-        this.getBooks()
-      )
+      .then( () => {
+        toast.error('Book Deleted');
+        this.getBooks();
+        
+      })
       .catch(err => console.log(err))
   }
 
