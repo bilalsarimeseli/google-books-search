@@ -10,11 +10,11 @@ React-based Google Books Search app. This SPA (Single Page Application) uses [`r
 
 ## Database
 
-1. Add code to connect to a MongoDB database named `googlebooks` using the mongoose npm package.
+1. Connect to a MongoDB database named `googlebooks` using the mongoose npm package.
 
-2. Using mongoose, then create a Book schema.
+2. Using mongoose, create a Book schema.
 
-3. At a minimum, books should have each of the following fields:
+3. Books should have each of the following fields:
 
 * `title` - Title of the book from the Google Books API
 
@@ -26,7 +26,7 @@ React-based Google Books Search app. This SPA (Single Page Application) uses [`r
 
 * `link` - The Book's information link as returned from the Google Books API
 
-* Creating `documents` in your `books` collection similar to the following:
+* Example JSON:
 
     ```js
     {
@@ -37,14 +37,6 @@ React-based Google Books Search app. This SPA (Single Page Application) uses [`r
       title: "The Hunger Games"
     }
     ```
-
-4. Express routes for your app:
-
-* `/api/books` (get) - Should return all saved books as JSON.
-
-* `/api/books` (post) - Will be used to save a new book to the database.
-
-* `/api/books/:id` (delete) - Will be used to delete a book from the database by Mongo `_id`.
 
 
 ### Technologies Implemented
