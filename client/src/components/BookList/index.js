@@ -18,7 +18,6 @@ export function BookList({children}) {
 ;    return (
       <li>
         <Container>
-        {/* {this.state.showToast && this.makeToast()} */} 
           <Row>
             <Col size="xs-4 sm-2">
               <Thumbnail src={this.props.thumbnail} />
