@@ -50,6 +50,7 @@ React-based Google Books Search app. This SPA (Single Page Application) uses [`r
 
 ### Screenshot
 
+![screenshot](https://github.com/bilalsarimeseli/google-books-search/blob/master/Screen%20Shot%202020-03-01%20at%203.13.53%20AM.png?raw=true)
 ### Live site
 
 * deployed: https://lil-google-books-search.herokuapp.com/
